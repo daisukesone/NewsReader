@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		02D1667D204630A200CD4AD9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D1667C204630A200CD4AD9 /* AppDelegate.swift */; };
-		02D1667F204630A200CD4AD9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D1667E204630A200CD4AD9 /* ViewController.swift */; };
 		02D16682204630A200CD4AD9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D16680204630A200CD4AD9 /* Main.storyboard */; };
 		02D16684204630A200CD4AD9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02D16683204630A200CD4AD9 /* Assets.xcassets */; };
 		02D16687204630A200CD4AD9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02D16685204630A200CD4AD9 /* LaunchScreen.storyboard */; };
 		02D16692204630A200CD4AD9 /* NewsReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D16691204630A200CD4AD9 /* NewsReaderTests.swift */; };
 		02D1669D204630A200CD4AD9 /* NewsReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D1669C204630A200CD4AD9 /* NewsReaderUITests.swift */; };
+		02D166AB2046310600CD4AD9 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D166AA2046310600CD4AD9 /* ListViewController.swift */; };
+		02D166AD204635CE00CD4AD9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D166AC204635CE00CD4AD9 /* Item.swift */; };
+		02D166B02046446B00CD4AD9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02D166AF2046446B00CD4AD9 /* WebKit.framework */; };
+		02D166B22046449E00CD4AD9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D166B12046449E00CD4AD9 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		02D16679204630A200CD4AD9 /* NewsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D1667C204630A200CD4AD9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		02D1667E204630A200CD4AD9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		02D16681204630A200CD4AD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02D16683204630A200CD4AD9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02D16686204630A200CD4AD9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,10 @@
 		02D16698204630A200CD4AD9 /* NewsReaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsReaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		02D1669C204630A200CD4AD9 /* NewsReaderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsReaderUITests.swift; sourceTree = "<group>"; };
 		02D1669E204630A200CD4AD9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02D166AA2046310600CD4AD9 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = SOURCE_ROOT; };
+		02D166AC204635CE00CD4AD9 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		02D166AF2046446B00CD4AD9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		02D166B12046449E00CD4AD9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02D166B02046446B00CD4AD9 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +88,7 @@
 				02D16690204630A200CD4AD9 /* NewsReaderTests */,
 				02D1669B204630A200CD4AD9 /* NewsReaderUITests */,
 				02D1667A204630A200CD4AD9 /* Products */,
+				02D166AE2046446B00CD4AD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,9 +105,11 @@
 		02D1667B204630A200CD4AD9 /* NewsReader */ = {
 			isa = PBXGroup;
 			children = (
+				02D166B12046449E00CD4AD9 /* DetailViewController.swift */,
 				02D1667C204630A200CD4AD9 /* AppDelegate.swift */,
-				02D1667E204630A200CD4AD9 /* ViewController.swift */,
 				02D16680204630A200CD4AD9 /* Main.storyboard */,
+				02D166AA2046310600CD4AD9 /* ListViewController.swift */,
+				02D166AC204635CE00CD4AD9 /* Item.swift */,
 				02D16683204630A200CD4AD9 /* Assets.xcassets */,
 				02D16685204630A200CD4AD9 /* LaunchScreen.storyboard */,
 				02D16688204630A200CD4AD9 /* Info.plist */,
@@ -123,6 +133,14 @@
 				02D1669E204630A200CD4AD9 /* Info.plist */,
 			);
 			path = NewsReaderUITests;
+			sourceTree = "<group>";
+		};
+		02D166AE2046446B00CD4AD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02D166AF2046446B00CD4AD9 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +277,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02D1667F204630A200CD4AD9 /* ViewController.swift in Sources */,
+				02D166AB2046310600CD4AD9 /* ListViewController.swift in Sources */,
+				02D166AD204635CE00CD4AD9 /* Item.swift in Sources */,
 				02D1667D204630A200CD4AD9 /* AppDelegate.swift in Sources */,
+				02D166B22046449E00CD4AD9 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
